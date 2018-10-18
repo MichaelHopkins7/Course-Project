@@ -1,16 +1,16 @@
-Requirements
+# Requirements
 
 
-#Make a new Character
+Make a new Character
 
-##Generate Character
+ - Generate Character
 	*GC1*Create character ID to connect character details to.
 	*GC2*Use user input for Stat generation system(ref: UI7) to 
 		determine starting stats.
 	*GC3*Apply race stat modifiers(ref: UI2) to starting stats(ref: GC2).
 	
 
-##User Input
+ - User Input
 	*UI1*Accept a character name from the user.
 	*UI2*Accept a character race from the user.
 	*UI3*Accept multiple character classes from the user.
@@ -23,7 +23,7 @@ Requirements
 	*UI10*Apply stat advances(ref: CA3) to character stats(ref: UI8) by user input.
 	
 	
-##Calculate Attributes
+ - Calculate Attributes
 	*CA1*Use class levels(ref: UI4) to calculate Hit Die Total.
 	*CA2*Use Hit Die Total(ref: CA1) to calculate feat total.
 	*CA3*Use Hit Die Total(ref: CA1) to calculate number of stat advances.
@@ -36,7 +36,7 @@ Requirements
 	*CA10*Use class skills(ref: UI3) with skill allocation(ref: UI9) to calculate skill bonuses.
 	*CA11*Apply size(ref: UI2) bonuses and penalties to applicable skills(ref: CA10).
 	
-##Display Character sheet
+ - Display Character sheet
 	*DCS1*Display Character Name(ref:UI1)
 	*DCS2*Display Character hit point total(ref: CA12)
 	*DCS3*Display Fort save bonus(ref: CA9
