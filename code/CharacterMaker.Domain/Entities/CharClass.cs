@@ -15,6 +15,7 @@ namespace CharacterMaker.Domain.Entities
         public int ArmorProf { get; set; }
         public int ShieldProf { get; set; }
         public string SpecialProf { get; set; }
-
+        public int SkillRanks { get; set; }
+        public string SkillList { get; set; }
     }
 }
