@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using CharacterMaker.Domain.Entities;
 
 namespace CharacterMaker.Domain.Abstract
 {
-    interface CharClassRepository
+    interface IClassRepository
     {
         IEnumerable<CharClass> CharClasses { get; }
     }
