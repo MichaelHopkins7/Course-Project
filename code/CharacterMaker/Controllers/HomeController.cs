@@ -13,6 +13,11 @@ namespace CharacterMaker.Controllers
             return View();
         }
 
+        public ActionResult NewCharacter()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

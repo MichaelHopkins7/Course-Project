@@ -88,3 +88,4 @@ D:\1 Class\1 Project\CourseProject\code\CharacterMaker\obj\Debug\CharacterMaker.
 D:\1 Class\1 Project\CourseProject\code\CharacterMaker\obj\Debug\CharacterMaker.WebUI.csproj.CopyComplete
 D:\1 Class\1 Project\CourseProject\code\CharacterMaker\obj\Debug\CharacterMaker.dll
 D:\1 Class\1 Project\CourseProject\code\CharacterMaker\obj\Debug\CharacterMaker.pdb
+D:\1 Class\1 Project\CourseProject\code\CharacterMaker\obj\Debug\CharacterMaker.WebUI.csprojAssemblyReference.cache
