@@ -6,6 +6,8 @@ namespace CharacterMaker.Domain.Entities
 {
     class CharClass
     {
+        public int ClassID { get; set; }
+        public string ClassName { get; set; }
         public int HDSize {get; set; }
         public int BABGrowth { get; set; }
         public int FortGrowth { get; set; }
