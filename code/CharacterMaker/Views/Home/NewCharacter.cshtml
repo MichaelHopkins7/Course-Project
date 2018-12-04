@@ -8,43 +8,56 @@
 @*used https://www.devcurry.com/2011/09/html-5-number-spinner-control.html for how to get number boxes*@
 
 <body>
-    <form>
-        <div>
-            <label for="strength">
-                Strength
-                <input type="number" name="strength" id="strength" min="7" max="18" step="1" value="10" />
-            </label>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="charName">Character Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="charName" id="charName" min="2" max="30" />
+            </div>
         </div>
-        <div>
-            <label for="dexterity">
-                Dexterity
-                <input type="number" name="dexterity" id="dexterity" min="7" max="18" step="1" value="10" />
-            </label>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="strength">Strength</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" name="strength" id="strength" min="7" max="18" step="1" value="10" />
+            </div>
         </div>
-        <div>
-            <label for="constitution">
-                Constitution
-                <input type="number" name="constitution" id="constitution" min="7" max="18" step="1" value="10" />
-            </label>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="dexterity">Dexterity</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" name="dexterity" id="dexterity" min="7" max="18" step="1" value="10" />
+            </div>
         </div>
-        <div>
-            <label for="intelligence">
-                Intelligence
-                <input type="number" name="intelligence" id="intelligence" min="7" max="18" step="1" value="10" />
-            </label>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="constitution">Constitution</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" name="constitution" id="constitution" min="7" max="18" step="1" value="10" />
+            </div>
         </div>
-        <div>
-            <label for="wisdom">
-                Wisdom
-                <input type="number" name="wisdom" id="wisdom" min="7" max="18" step="1" value="10" />
-            </label>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="intelligence">Intelligence</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" name="intelligence" id="intelligence" min="7" max="18" step="1" value="10" />
+            </div>
         </div>
-        <div>
-            <label for="charisma">
-                Charisma
-                <input type="number" name="charisma" id="charisma" min="7" max="18" step="1" value="10" />
-            </label>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="wisdom">Wisdom</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" name="wisdom" id="wisdom" min="7" max="18" step="1" value="10" />
+            </div>
         </div>
-    </form>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="charisma">Charisma</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" name="charisma" id="charisma" min="7" max="18" step="1" value="10" />
+            </div>
+        </div>
+
+</form>
 </body>
 
