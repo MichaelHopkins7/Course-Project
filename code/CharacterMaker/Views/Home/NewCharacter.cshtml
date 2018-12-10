@@ -8,9 +8,15 @@
 @*used https://www.devcurry.com/2011/09/html-5-number-spinner-control.html for how to get number boxes*@
 
 <script>
-    function handleChange(input) {
+    function handleChange(input, output) {
         if (input.value < 7) input.value = 7;
         if (input.value > 18) input.value = 18;
+
+        output.text(abiMod(input.value))
+    }
+    function abiMod(score) {
+        var modifier = Math.floor(score / 2) - 5;
+        return modifier;
     }
 </script>
 
@@ -18,16 +24,19 @@
     <form class="form-horizontal">
         <div class="form-group">
             <label class="col-sm-2 control-label" for="charName">Character Name</label>
-            <div class="col-sm-10">
+            <div class="col-sm-4">
                 <input type="text" class="form-control" name="charName" id="charName" min="2" max="30" />
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="strength">Strength</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" onchange="handleChange(this)" name="strength" id="strength" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-4">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#strMod'))" name="strength" id="strength" min="7" max="18" step="1" value="10" />
             </div>
+            
+                <label class="col-sm-0" id="strMod" for="strength">0</label>
+                        
         </div>
 
         <div class="form-group">

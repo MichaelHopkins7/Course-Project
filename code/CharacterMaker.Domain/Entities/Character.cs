@@ -38,7 +38,7 @@ namespace CharacterMaker.Domain.Entities
             int pointcost = -6;
             int accumulator;
             for (int i = 7; i <= abilityScore; i++)
-{
+            {
                 accumulator = Math.Abs((i % 2) - 5);
                 pointcost += accumulator;
             }
