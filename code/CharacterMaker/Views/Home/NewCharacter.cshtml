@@ -34,44 +34,47 @@
             <div class="col-sm-4">
                 <input type="number" class="form-control" onchange="handleChange(this, $('#strMod'))" name="strength" id="strength" min="7" max="18" step="1" value="10" />
             </div>
-            
-                <label class="col-sm-0" id="strMod" for="strength">0</label>
-                        
+            <label class="col-sm-0 control-label" id="strMod" for="strength">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="dexterity">Dexterity</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" onchange="handleChange(this)" name="dexterity" id="dexterity" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-4">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#dexMod'))" name="dexterity" id="dexterity" min="7" max="18" step="1" value="10" />
             </div>
+            <label class="col-sm-0 control-label" id="dexMod" for="dexterity">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="constitution">Constitution</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" onchange="handleChange(this)" name="constitution" id="constitution" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-4">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#conMod'))" name="constitution" id="constitution" min="7" max="18" step="1" value="10" />
             </div>
+            <label class="col-sm-0 control-label" id="conMod" for="constitution">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="intelligence">Intelligence</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" onchange="handleChange(this)" name="intelligence" id="intelligence" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-4">
+                <input type="number" class="form-control" onchange="handleChange(this, $('intMod')" name="intelligence" id="intelligence" min="7" max="18" step="1" value="10" />
             </div>
+            <label class="col-sm-0 control-label" id="intMod" for="intelligence">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="wisdom">Wisdom</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" onchange="handleChange(this)" name="wisdom" id="wisdom" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-4">
+                <input type="number" class="form-control" onchange="handleChange(this $('wisMod'))" name="wisdom" id="wisdom" min="7" max="18" step="1" value="10" />
             </div>
+            <label class="col-sm-0 control-label" id="wisMod" for="wisdom">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="charisma">Charisma</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" onchange="handleChange(this)" name="charisma" id="charisma" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-4">
+                <input type="number" class="form-control" onchange="handleChange(this $('chaMod'))" name="charisma" id="charisma" min="7" max="18" step="1" value="10" />
             </div>
+            <label class="col-sm-0 control-label" id="chaMod" for="charisma">0</label>
         </div>
 
 </form>
