@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterMaker.WebUI", "CharacterMaker\CharacterMaker.WebUI.csproj", "{EFDBCD1E-471A-4C85-9B63-8C37F16EB9D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterMaker", "CharacterMaker\CharacterMaker.csproj", "{EFDBCD1E-471A-4C85-9B63-8C37F16EB9D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{6115A538-3CBB-4A89-BDF4-BEF23F8FFA15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterMaker.Domain", "CharacterMaker.Domain\CharacterMaker.Domain.csproj", "{E518EA63-DDCF-43F2-B5C5-76BB76C0DFE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharacterMaker.Domain", "CharacterMaker.Domain\CharacterMaker.Domain.csproj", "{E518EA63-DDCF-43F2-B5C5-76BB76C0DFE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

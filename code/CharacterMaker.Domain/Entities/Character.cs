@@ -27,11 +27,7 @@ namespace CharacterMaker.Domain.Entities
         public int Fort { get; set; }
         public int Reflex { get; set; }
         public int Will { get; set; }
-
-        public int GetAbilityMod(int abilityScore)
-        {
-            return (abilityScore / 2) - 5;
-        }
+        
 
         public int GetPointCost(int abilityScore)
         {

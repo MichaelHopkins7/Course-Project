@@ -61,9 +61,9 @@
       <Project>{e518ea63-ddcf-43f2-b5c5-76bb76c0dfe5}</Project>
       <Name>CharacterMaker.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CharacterMaker\CharacterMaker.WebUI.csproj">
+    <ProjectReference Include="..\CharacterMaker\CharacterMaker.csproj">
       <Project>{efdbcd1e-471a-4c85-9b63-8c37f16eb9d3}</Project>
-      <Name>CharacterMaker.WebUI</Name>
+      <Name>CharacterMaker</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
