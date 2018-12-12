@@ -8,16 +8,38 @@
 @*used https://www.devcurry.com/2011/09/html-5-number-spinner-control.html for how to get number boxes*@
 
 <script>
-    function handleChange(input, output) {
-        if (input.value < 7) input.value = 7;
-        if (input.value > 18) input.value = 18;
+    function handleChange(input, abiMod, pointCost) {
+        var stat = input.value;
+        if (stat < 7) stat = 7;
+        if (stat > 18) stat = 18;
 
-        output.text(abiMod(input.value))
+        abiMod.text(Math.floor(stat / 2.0) - 5);
+        var i;
+        var cost = -4;
+        var change = 2;
+        for (i = 8; i <= stat; i++) {
+            cost = cost + change;
+            change = Math.abs(Math.floor((i+1) / 2.0) - 5);
+            if (change == 0) {
+                change = 1;
+            }
+        }
+        pointCost.text(cost);
+        calcCost();
     }
-    function abiMod(score) {
-        var modifier = Math.floor(score / 2) - 5;
-        return modifier;
+
+    function calcCost() {
+        var str = document.getElementById('strCost');
+        var dex = document.getElementById('dexCost');
+        var con = document.getElementById('conCost');
+        var int = document.getElementById('intCost');
+        var wis = document.getElementById('wisCost');
+        var cha = document.getElementById('chaCost');
+        var total = document.getElementById('totalCost');
+        total.innerHTML = (Number(str.innerHTML) + Number(dex.innerHTML) + Number(con.innerHTML) + Number(int.innerHTML) + Number(wis.innerHTML) + Number(cha.innerHTML));
     }
+    
+
 </script>
 
 <body>
@@ -29,54 +51,75 @@
             </div>
         </div>
 
+        <div class="form-group"></div>
+
+        <div class="form-group">
+            <div class="col-sm-2" align="right"><b style="font-size: 20px">Ability</b></div>
+            <div class="col-sm-2" ><b style="font-size: 20px">Score</b></div>
+            <div class="col-sm-2" style="text-align: left"><b style="font-size: 20px">Modifier</b></div>
+            <div class="col-sm-2" style="text-align: left"><b style="font-size: 20px">Point Cost</b></div>
+
+        </div>
+
         <div class="form-group">
             <label class="col-sm-2 control-label" for="strength">Strength</label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" onchange="handleChange(this, $('#strMod'))" name="strength" id="strength" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-2">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#strMod'), $('#strCost'))" name="strength" id="strength" min="7" max="18" step="1" value="10" />
             </div>
-            <label class="col-sm-0 control-label" id="strMod" for="strength">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" for="strength" id="strMod">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" for="strength" id="strCost">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="dexterity">Dexterity</label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" onchange="handleChange(this, $('#dexMod'))" name="dexterity" id="dexterity" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-2">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#dexMod'), $('#dexCost'))" name="dexterity" id="dexterity" min="7" max="18" step="1" value="10" />
             </div>
-            <label class="col-sm-0 control-label" id="dexMod" for="dexterity">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="dexMod" for="dexterity">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="dexCost" for="dexterity">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="constitution">Constitution</label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" onchange="handleChange(this, $('#conMod'))" name="constitution" id="constitution" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-2">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#conMod'), $('#conCost'))" name="constitution" id="constitution" min="7" max="18" step="1" value="10" />
             </div>
-            <label class="col-sm-0 control-label" id="conMod" for="constitution">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="conMod" for="constitution">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="conCost" for="constitution">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="intelligence">Intelligence</label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" onchange="handleChange(this, $('intMod')" name="intelligence" id="intelligence" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-2">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#intMod'), $('#intCost'))" name="intelligence" id="intelligence" min="7" max="18" step="1" value="10" />
             </div>
-            <label class="col-sm-0 control-label" id="intMod" for="intelligence">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="intMod" for="intelligence">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="intCost" for="intelligence">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="wisdom">Wisdom</label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" onchange="handleChange(this $('wisMod'))" name="wisdom" id="wisdom" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-2">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#wisMod'), $('#wisCost'))" name="wisdom" id="wisdom" min="7" max="18" step="1" value="10" />
             </div>
-            <label class="col-sm-0 control-label" id="wisMod" for="wisdom">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="wisMod" for="wisdom">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="wisCost" for="wisdom">0</label>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="charisma">Charisma</label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" onchange="handleChange(this $('chaMod'))" name="charisma" id="charisma" min="7" max="18" step="1" value="10" />
+            <div class="col-sm-2">
+                <input type="number" class="form-control" onchange="handleChange(this, $('#chaMod'), $('#chaCost'))" name="charisma" id="charisma" min="7" max="18" step="1" value="10" />
             </div>
-            <label class="col-sm-0 control-label" id="chaMod" for="charisma">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="chaMod" for="charisma">0</label>
+            <label class="col-sm-2 control-label" style="text-align: left" id="chaCost" for="charisma">0</label>
         </div>
 
+        <div class="form-group">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3" align="right" id="total"><b style="font-size: 20px">Total Point Cost:</b></div>
+            <label class="col-sm-2 control-label" style="text-align: left" id="totalCost" for="total">0</label>
+        </div>
 </form>
 </body>
 
