@@ -13,6 +13,7 @@
         var stat = input.value;
         if (stat < 7) stat = 7;
         if (stat > 18) stat = 18;
+        input.value = stat;
 
         abiMod.text(Math.floor(stat / 2.0) - 5);
         var i;
